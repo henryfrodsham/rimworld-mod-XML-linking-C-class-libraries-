@@ -1,0 +1,5 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\testmod\Assemblies\testmod.dll
+C:\Users\thesh\source\repos\testmod\testmod\obj\Debug\testmod.csproj.AssemblyReference.cache
+C:\Users\thesh\source\repos\testmod\testmod\obj\Debug\testmod.csproj.CoreCompileInputs.cache
+C:\Users\thesh\source\repos\testmod\testmod\obj\Debug\testmod.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\EmpMod\Assemblies\testmod.dll

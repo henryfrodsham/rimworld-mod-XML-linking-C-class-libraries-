@@ -1,0 +1,5 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\EmpMod\Assemblies\testmod.dll
+C:\Users\thesh\source\repos\testmod\testmod\obj\Debug\EmpGunExt.csproj.AssemblyReference.cache
+C:\Users\thesh\source\repos\testmod\testmod\obj\Debug\EmpGunExt.csproj.CoreCompileInputs.cache
+C:\Users\thesh\source\repos\testmod\testmod\obj\Debug\testmod.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\HEP rifle\Assemblies\testmod.dll
