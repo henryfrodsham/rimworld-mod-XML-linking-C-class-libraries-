@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+
+    <name>HEP-rifle</name>
+
+    <author>mackos</author>
+
+    <supportedVersions>
+        <li>1.4</li>
+    </supportedVersions>
+
+    <packageId>Mackos.HEPRifle</packageId>
+
+
+<description>a rifle that fires a large concetrated energy burst that can either disrupt a mechanoid or cause a heart attack</description>
+
+</ModMetaData>

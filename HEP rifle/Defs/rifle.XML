@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+ <Defs>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_HEP</defName>
+    <label>sniper rifle bullet</label>
+	<thingClass>HEP_rifle.proj</thingClass>
+	<modExtensions>
+		<li Class="HEP_rifle.linker">
+			<effect>EnergyShock</effect>
+		</li>
+	</modExtensions>
+    <graphicData>
+      <texPath>Projectile/HEPBullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>EMP</damageDef>
+      <stoppingPower>1.5</stoppingPower>
+      <speed>85</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>HEP_rifle</defName>
+    <label>high energy projectile rifle</label>
+    <description>a long range precision rifle designed to either overload a mechanoid temporarily or disrupt a humans normal cardiac cycle causing a heart attack</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Gun/HEP_rifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <weaponClasses>
+      <li>LongShots</li>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <recipeMaker>
+      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <displayPriority>425</displayPriority>
+    </recipeMaker>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>10</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_HEP</defaultProjectile>
+        <warmupTime>3.5</warmupTime>
+        <range>50</range>
+        <soundCast>Shot_SniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags Inherit="False">
+      <li>SniperRifle</li>
+    </weaponTags>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>EnergyShock</defName>
+    <label>energy shock</label>
+    <labelNoun>an energy shock</labelNoun>
+    <description>a disruption in central processing, for humans it will be in the heart and for mechs will cause a shock in the central data processor</description>
+    <hediffClass>Hediff_HeartAttack</hediffClass>
+    <defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
+    <initialSeverity>0.4</initialSeverity>
+    <lethalSeverity>1</lethalSeverity>
+    <tendable>true</tendable>
+    <stages>
+      <li>
+        <label>stage 1/3</label>
+        <lifeThreatening>true</lifeThreatening>
+        <painOffset>0.6</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <postFactor>0.4</postFactor>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>stage 2/3</label>
+        <minSeverity>0.6</minSeverity>
+        <lifeThreatening>true</lifeThreatening>
+        <painOffset>0.8</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>shutdown - stage 3</label>
+        <minSeverity>1</minSeverity>
+      </li>
+    </stages>
+  </HediffDef>
+ </Defs>
